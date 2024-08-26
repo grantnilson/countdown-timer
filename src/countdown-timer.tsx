@@ -13,7 +13,6 @@ export default function CountdownTimer() {
   const intervalId = useRef<number | null>(null);
 
   const handleClickStart = () => {
-    // If a timer is already running, do not start another one
     if (intervalId.current !== null) {
       return;
     }
@@ -26,7 +25,6 @@ export default function CountdownTimer() {
   };
 
   const handleClickStop = () => {
-    // If the timer is already stopped, do nothing
     if (intervalId.current === null) {
       return;
     }
